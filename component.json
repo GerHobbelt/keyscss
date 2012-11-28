@@ -1,0 +1,8 @@
+{
+  "name": "keys.less",
+  "version": "0.0.1",
+  "main": ["./keys.less"],
+  "dependencies": {
+    "bootstrap": ">=2.2.0"
+  }
+}
