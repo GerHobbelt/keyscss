@@ -1,14 +1,14 @@
-/**
- * KEYS.less
- *
- * A simple stylesheet for rendering beautiful keyboard-style elements.
- *
- * Author:  Michael Hüneburg
- * Website: http://michaelhue.com/keyscss
- * License: MIT License (see LICENSE.txt)
- */
+//
+// KEYS.less
+//
+// A simple stylesheet for rendering beautiful keyboard-style elements.
+//
+// Author:  Michael Hüneburg
+// Website: http://michaelhue.com/keyscss
+// License: MIT License (see LICENSE.txt)
+//
 
-/* Base style, essential for every key. */
+// Base style, essential for every key.
 kbd, .key {
 	display: inline;
 	display: inline-block;
@@ -28,7 +28,7 @@ kbd[title], .key[title] {
 	cursor: help;
 }
 
-/* Dark style for display on light background. This is the default style. */
+// Dark style for display on light background. This is the default style.
 kbd, kbd.dark, .dark-keys kbd, .key, .key.dark, .dark-keys .key {
 	color: rgb(250, 250, 250);
 	text-shadow: -1px -1px 0 rgb(70, 70, 70);
@@ -37,7 +37,7 @@ kbd, kbd.dark, .dark-keys kbd, .key, .key.dark, .dark-keys .key {
   .box-shadow(@boxShadow);
 }
 
-/* Light style for display on dark background. */
+// Light style for display on dark background.
 kbd.light, .light-keys kbd, .key.light, .light-keys .key {
 	color:  rgb(50, 50, 50);
 	text-shadow: 0 0 2px rgb(255, 255, 255);
