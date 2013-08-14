@@ -1,4 +1,4 @@
-# KEYS.css
+# KEYS.less
 
 A simple stylesheet to render beautiful keyboard-styled elements.
 
