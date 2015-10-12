@@ -1,0 +1,25 @@
+{
+  "name": "keyscss",
+  "version": "1.1.2",
+  "description": "A simple stylesheet to render beautiful keyboard-styled elements.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./build.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelhue/keyscss.git"
+  },
+  "keywords": [
+    "css",
+    "keyboard",
+    "keycap",
+    "keycaps"
+  ],
+  "author": "Michael Hüneburg",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/michaelhue/keyscss/issues"
+  },
+  "homepage": "http://michaelhue.com/keyscss/"
+}
