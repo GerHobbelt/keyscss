@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/michaelhue/keyscss/issues"
   },
-  "homepage": "http://michaelhue.com/keyscss/"
+  "homepage": "http://michaelhue.com/keyscss/",
+  "devDependencies": {
+    "less": "^2.5.3"
+  }
 }
