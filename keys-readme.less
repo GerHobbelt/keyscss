@@ -1,46 +1,6 @@
 // Special styles for the README:
 
-@import "keys";
-
-
-// -----------------------------------------------------------------------------------------
-
-
-// Base style, essential for every key.
-kbd, 
-.key 
-{
-    .keycap-dark();
-
-    font-size: .85em;
-    line-height: 1;
-
-    cursor: default;
-    user-select: none;
-
-    &[title]
-    {
-        cursor: help;
-    }
-}
-
-// Dark style for display on light background. This is the default style.
-kbd.dark, 
-.dark-keys kbd, 
-.key.dark, 
-.dark-keys .key 
-{
-    .keycap-dark();
-}
-
-// Light style for display on dark background.
-kbd.light, 
-.light-keys kbd, 
-.key.light, 
-.light-keys .key 
-{
-    .keycap-light();
-}
+@import "keys-macros";
 
 
 // -----------------------------------------------------------------------------------------
