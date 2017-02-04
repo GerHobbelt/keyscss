@@ -85,6 +85,5 @@ h1 kbd {
   box-shadow: inset 0 0 1px #969696, inset 0 -0.05em 0.4em #505050, 0 0.1em 0 #1e1e1e, 0 0.1em 0.1em rgba(0, 0, 0, 0.3);
   font-size: .85em;
   line-height: 1;
-  border-radius: 0.1em;
   vertical-align: baseline;
 }
