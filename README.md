@@ -69,6 +69,38 @@ The stylesheet comes with two classes for light and dark keys for good visibilit
 
 That's all. The size of the keys depends on the set `font-size`.
 
+
+
+## Usage for LESS users
+
+Import the LESS macros in your project like this:
+
+```less
+@import "node_modules/keyscss/keys-macros";
+```
+
+Three macro's (a.k.a. "mixins") are defined:
+
+- `.keycap()` : this is the base mixin which defines the key shape
+- `.keycap-dark()` : this is the 'dark theme' for the keys
+- `.keycap-light()` : this is the 'light theme' for the keys
+
+You can use these macros in your own LESS stylesheets like this, for example to style all `<KBD>` tags in your HTML:
+
+```less
+kbd
+{
+    .keycap-light();
+
+    // override the padding defined by the mixin:
+    padding: 0em .25em .0em .25em;
+
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+}
+```
+
+
 ## License
 
 MIT License (see LICENSE.txt)
