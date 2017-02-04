@@ -61,6 +61,16 @@ kbd.light,
 .light-keys kbd,
 .key.light,
 .light-keys .key {
+  display: inline;
+  display: inline-block;
+  min-width: 1em;
+  padding: .3em .4em .2em .3em;
+  font-style: normal;
+  font-family: "Lucida Grande", Lucida, Arial, sans-serif;
+  text-align: center;
+  text-decoration: none;
+  border-radius: .3em;
+  border: none;
   background: #fafafa;
   background: gradient(linear, left top, left bottom, from(#d2d2d2), to(#ffffff));
   color: #323232;
