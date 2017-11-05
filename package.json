@@ -4,7 +4,7 @@
   "description": "A simple stylesheet to render beautiful keyboard-styled elements.",
   "scripts": {
     "build": "bash ./build.sh",
-    "test": "echo \"Warning: no test specified\" && exit 0",
+    "test": "npm run build && echo \"Warning: no test specified\" && exit 0",
     "pub": "npm publish --access public"
   },
   "repository": {
