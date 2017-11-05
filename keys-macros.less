@@ -88,540 +88,159 @@
     box-shadow: inset 0 0 25px #e8e8e8, 0 1px 0 #c3c3c3, 0 2px 0 #c9c9c9, 0 2px 3px #333;
     text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8);
     margin: 0px;
-}
 
-.keyboard-key.dark {
-    color: #aaa;
-    background: #222;
-    box-shadow: inset 0 0 25px #333, 0 1px 0 #000, 0 2px 0 #222, 0 2px 3px #333;
-    text-shadow: 0px -1px 0px #000;
-}
+    &.dark {
+        color: #aaa;
+        background: #222;
+        box-shadow: inset 0 0 25px #333, 0 1px 0 #000, 0 2px 0 #222, 0 2px 3px #333;
+        text-shadow: 0px -1px 0px #000;
+    }
 
-.keyboard-key:active, .keyboard-keydown {
-    color: #888;
-    background: #ebeced;
-    margin: 0px 0px -2px 0px;
-    box-shadow: inset 0 0 25px #ddd, 0 0 3px #333;
-    border-top: 1px solid rgba(255, 255, 255, 0.8);
-}
+    &:active, 
+    &.keyboard-keydown {
+        color: #888;
+        background: #ebeced;
+        margin: 0px 0px -2px 0px;
+        box-shadow: inset 0 0 25px #ddd, 0 0 3px #333;
+        border-top: 1px solid rgba(255, 255, 255, 0.8);
+    }
 
-.keyboard-key.dark:active, .keyboard-keydown.dark {
-    color: #888;
-    background: #222;
-    box-shadow: inset 0 0 25px #333, 0 0 3px #333;
-}
+    &.dark:active, 
+    &.keyboard-keydown.dark {
+        color: #888;
+        background: #222;
+        box-shadow: inset 0 0 25px #333, 0 0 3px #333;
+    }
 
-.short {
-    font-size: 8px;
-    height: 26px;
-    width: 46px;
-}
+    // -----------------------------------------------------------
+    // macros for the subsequent key defs:
 
-.centered {
-    position: absolute;
-    top: 50%;
-    margin-top: -0.5em;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-}
+    .short() {
+        font-size: 8px;
+        height: 26px;
+        width: 46px;
+    }
 
-.bottom-right {
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
-}
+    .centered() {
+        //position: absolute;
+        //top: 50%;
+        //margin-top: -0.5em;
+        //left: 0;
+        //right: 0;
+        //margin-left: auto;
+        //margin-right: auto;
+    }
 
-.bottom-left {
-    position: absolute;
-    bottom: 5px;
-    left: 5px;
-}
+    .bottom-right() {
+        //position: absolute;
+        //bottom: 5px;
+        //right: 5px;
+    }
 
-.bottom-center {
-    position: absolute;
-    bottom: 5px;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-}
+    .bottom-left() {
+        //position: absolute;
+        //bottom: 5px;
+        //left: 5px;
+    }
 
-/* functions */
-.keyboard-key.f1 {
-    .short;
-    &::before {
+    .bottom-center() {
+        //position: absolute;
+        //bottom: 5px;
+        //left: 0;
+        //right: 0;
+        //margin-left: auto;
+        //margin-right: auto;
+    }
+
+    // -----------------------------------------------------------
+
+    // function keys and media keys, etc. in the top row: half height on laptops.
+    &.fkey,
+    &.toprowkey {
+        .short;
         .bottom-right;
-        content: "F1";
+        // content: "F1" .. "F12";
     }
-}
 
-.keyboard-key.f2 {
-    .short;
-    &::before {
-        .bottom-right;
-        content: "F2";
+    &.ejectkey {
+        .short;
+        &::before {
+            .bottom-right;
+            // content: "EJECT";
+        }
     }
-}
 
-.keyboard-key.f3 {
-    .short;
-    &::before {
-        .bottom-right;
-        content: "F3";
+    // numbers and letters: regular keys
+    &.basekey {
+        &::before {
+            .centered;
+            // content: "1" .. "9", "a" .. "z", ...
+        }
     }
-}
 
-.keyboard-key.f4 {
-    .short;
-    &::before {
-        .bottom-right;
-        content: "F4";
+    // utility keys
+    &.esckey {
+        .short;
+        &::before {
+            .centered;
+            font-size: 10px;
+            // content: "esc";
+        }
     }
-}
 
-.keyboard-key.f5 {
-    .short;
-    &::before {
-        .bottom-right;
-        content: "F5";
+    &.control-left {
+        &::before {
+            .bottom-left;
+            font-size: 10px;
+            // content: "alt" / "cmd" / "ctrl" / "delete" (Apple) / ...;
+        }
     }
-}
 
-.keyboard-key.f6 {
-    .short;
-    &::before {
-        .bottom-right;
-        content: "F6";
+    &.control-right {
+        &::before {
+            .bottom-right;
+            font-size: 10px;
+            // content: "alt" / "ctrl" / "alt-gr" / ...;
+        }
     }
-}
 
-.keyboard-key.f7 {
-    .short;
-    &::before {
-        .bottom-right;
-        content: "F7";
+    &.control-center {
+        &::before {
+            .bottom-center;
+            font-size: 10px;
+            // content: "option";
+        }
     }
-}
 
-.keyboard-key.f8 {
-    .short;
-    &::before {
-        .bottom-right;
-        content: "F8";
+    &.control-right-wide {
+        width: 72px;
+        &::before {
+            .bottom-right;
+            font-size: 10px;
+            // content: "return";
+        }
     }
-}
 
-.keyboard-key.f9 {
-    .short;
-    &::before {
-        .bottom-right;
-        content: "F9";
+    &.control-left-wide {
+        width: 72px;
+        &::before {
+            .bottom-left;
+            font-size: 10px;
+            // content: "shift" / "tab";
+        }
     }
-}
 
-.keyboard-key.f10 {
-    .short;
-    &::before {
-        .bottom-right;
-        content: "F10";
+    &.spacekey {
+        width: 226px;
     }
-}
 
-.keyboard-key.f11 {
-    .short;
-    &::before {
-        .bottom-right;
-        content: "F11";
-    }
-}
-
-.keyboard-key.f12 {
-    .short;
-    &::before {
-        .bottom-right;
-        content: "F12";
-    }
-}
-
-.keyboard-key.eject {
-    .short;
-    &::before {
-        .bottom-right;
-        content: "EJECT";
-    }
-}
-
-/* numbers */
-.keyboard-key.one {
-    &::before {
-        .centered;
-        content: "1";
-    }
-}
-
-.keyboard-key.two {
-    &::before {
-        .centered;
-        content: "2";
-    }
-}
-
-.keyboard-key.three {
-    &::before {
-        .centered;
-        content: "3";
-    }
-}
-
-.keyboard-key.four {
-    &::before {
-        .centered;
-        content: "4";
-    }
-}
-
-.keyboard-key.five {
-    &::before {
-        .centered;
-        content: "5";
-    }
-}
-
-.keyboard-key.six {
-    &::before {
-        .centered;
-        content: "6";
-    }
-}
-
-.keyboard-key.seven {
-    &::before {
-        .centered;
-        content: "7";
-    }
-}
-
-.keyboard-key.eight {
-    &::before {
-        .centered;
-        content: "8";
-    }
-}
-
-.keyboard-key.nine {
-    &::before {
-        .centered;
-        content: "9";
-    }
-}
-
-.keyboard-key.zero {
-    &::before {
-        .centered;
-        content: "0";
-    }
-}
-
-/* alphabet */
-.keyboard-key.q {
-    &::before {
-        .centered;
-        content: "q";
-    }
-}
-
-.keyboard-key.w {
-    &::before {
-        .centered;
-        content: "w";
-    }
-}
-
-.keyboard-key.e {
-    &::before {
-        .centered;
-        content: "e";
-    }
-}
-
-.keyboard-key.r {
-    &::before {
-        .centered;
-        content: "r";
-    }
-}
-
-.keyboard-key.t {
-    &::before {
-        .centered;
-        content: "t";
-    }
-}
-
-.keyboard-key.y {
-    &::before {
-        .centered;
-        content: "y";
-    }
-}
-
-.keyboard-key.u {
-    &::before {
-        .centered;
-        content: "u";
-    }
-}
-
-.keyboard-key.i {
-    &::before {
-        .centered;
-        content: "i";
-    }
-}
-
-.keyboard-key.o {
-    &::before {
-        .centered;
-        content: "o";
-    }
-}
-
-.keyboard-key.p {
-    &::before {
-        .centered;
-        content: "p";
-    }
-}
-
-.keyboard-key.a {
-    &::before {
-        .centered;
-        content: "a";
-    }
-}
-
-.keyboard-key.s {
-    &::before {
-        .centered;
-        content: "s";
-    }
-}
-
-.keyboard-key.d {
-    &::before {
-        .centered;
-        content: "d";
-    }
-}
-
-.keyboard-key.f {
-    &::before {
-        .centered;
-        content: "f";
-    }
-}
-
-.keyboard-key.g {
-    &::before {
-        .centered;
-        content: "g";
-    }
-}
-
-.keyboard-key.h {
-    &::before {
-        .centered;
-        content: "h";
-    }
-}
-
-.keyboard-key.j {
-    &::before {
-        .centered;
-        content: "j";
-    }
-}
-
-.keyboard-key.k {
-    &::before {
-        .centered;
-        content: "k";
-    }
-}
-
-.keyboard-key.l {
-    &::before {
-        .centered;
-        content: "l";
-    }
-}
-
-.keyboard-key.z {
-    &::before {
-        .centered;
-        content: "z";
-    }
-}
-
-.keyboard-key.x {
-    &::before {
-        .centered;
-        content: "x";
-    }
-}
-
-.keyboard-key.c {
-    &::before {
-        .centered;
-        content: "c";
-    }
-}
-
-.keyboard-key.v {
-    &::before {
-        .centered;
-        content: "v";
-    }
-}
-
-.keyboard-key.b {
-    &::before {
-        .centered;
-        content: "b";
-    }
-}
-
-.keyboard-key.n {
-    &::before {
-        .centered;
-        content: "n";
-    }
-}
-
-.keyboard-key.m {
-    &::before {
-        .centered;
-        content: "m";
-    }
-}
-
-/* utility */
-.keyboard-key.esc {
-    .short;
-    &::before {
-        .centered;
-        font-size: 10px;
-        content: "esc";
-    }
-}
-
-.keyboard-key.alt {
-    &::before {
-        .bottom-left;
-        font-size: 10px;
-        content: "alt";
-    }
-}
-
-.keyboard-key.cmd {
-    width: 72px;
-    &::before {
-        .bottom-left;
-        font-size: 10px;
-        content: "cmd";
-    }
-}
-
-.keyboard-key.ctrl {
-    &::before {
-        .bottom-left;
-        font-size: 10px;
-        content: "ctrl";
-    }
-}
-
-.keyboard-key.delete {
-    &::before {
-        .bottom-left;
-        font-size: 10px;
-        content: "delete";
-    }
-}
-
-.keyboard-key.option {
-    &::before {
-        .bottom-center;
-        font-size: 10px;
-        content: "option";
-    }
-}
-
-.keyboard-key.return {
-    width: 72px;
-    &::before {
-        .bottom-right;
-        font-size: 10px;
-        content: "return";
-    }
-}
-
-.keyboard-key.shift {
-    width: 72px;
-    &::before {
-        .bottom-left;
-        font-size: 10px;
-        content: "shift";
-    }
-}
-
-.keyboard-key.space {
-    width: 226px;
-}
-
-.keyboard-key.tab {
-    width: 72px;
-    &::before {
-        .bottom-left;
-        font-size: 10px;
-        content: "tab";
-    }
-}
-
-/* arrows */
-.keyboard-key.up {
-    .short;
-    &::before {
-        .centered;
-        font-size: 10px;
-        content: "▲";
-    }
-}
-
-.keyboard-key.down {
-    .short;
-    &::before {
-        .centered;
-        font-size: 10px;
-        content: "▼";
-    }
-}
-
-.keyboard-key.left {
-    .short;
-    &::before {
-        .centered;
-        font-size: 10px;
-        content: "◀";
-    }
-}
-
-.keyboard-key.right {
-    .short;
-    &::before {
-        .centered;
-        font-size: 10px;
-        content: "▶";
+    // arrows 
+    &.arrowkey {
+        .short;
+        &::before {
+            .centered;
+            font-size: 10px;
+            // content: "▲" / "▼" / "◀" / "▶";
+        }
     }
 }
