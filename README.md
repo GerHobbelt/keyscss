@@ -67,6 +67,28 @@ The stylesheet comes with two classes for light and dark keys for good visibilit
 
 
 
+```html
+<!-- StackOverflow-styled keys: -->
+<kbd class="so">ctrl</kbd> + <kbd class="so">S</kbd>
+```
+
+<kbd class="so">ctrl</kbd> + <kbd class="so">S</kbd>
+
+
+
+```html
+<!-- ...or... -->
+<span class="so-keys">
+    <kbd>ctrl</kbd> + <kbd>S</kbd>
+</span>
+```
+
+<span class="so-keys">
+    <kbd>ctrl</kbd> + <kbd>S</kbd>
+</span>
+
+
+
 That's all. The size of the keys depends on the set `font-size`.
 
 
