@@ -14,6 +14,7 @@
 {
     display: inline;
     display: inline-block;
+    white-space: nowrap;
     min-width: 1em;
     padding: .3em .4em .2em .3em;
 
@@ -51,3 +52,20 @@
     box-shadow: inset 0 0 1px rgb(255, 255, 255), inset 0 0 .4em rgb(200, 200, 200), 0 .1em 0 rgb(130, 130, 130), 0 .11em 0 rgba(0, 0, 0, .4), 0 .1em .11em rgba(0, 0, 0, .9);
 }
 
+// keys styled a la StackOverflow anno 2017
+.keycap-stackoverflow()
+{
+    .keycap();
+
+    margin: 0 .1em;
+    padding: .1em .6em;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 11px;
+    line-height: 1.4;
+    color: #242729;
+    text-shadow: 0 1px 0 #FFF;
+    background-color: #e1e3e5;
+    border: 1px solid #adb3b9;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(12,13,14,0.2), 0 0 0 2px #FFF inset;
+}

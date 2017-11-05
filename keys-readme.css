@@ -11,6 +11,7 @@
 h1 kbd {
   display: inline;
   display: inline-block;
+  white-space: nowrap;
   min-width: 1em;
   padding: .3em .4em .2em .3em;
   font-style: normal;

@@ -12,6 +12,7 @@ kbd,
 .key {
   display: inline;
   display: inline-block;
+  white-space: nowrap;
   min-width: 1em;
   padding: .3em .4em .2em .3em;
   font-style: normal;
@@ -43,6 +44,7 @@ kbd.dark,
 .dark-keys .key {
   display: inline;
   display: inline-block;
+  white-space: nowrap;
   min-width: 1em;
   padding: .3em .4em .2em .3em;
   font-style: normal;
@@ -63,6 +65,7 @@ kbd.light,
 .light-keys .key {
   display: inline;
   display: inline-block;
+  white-space: nowrap;
   min-width: 1em;
   padding: .3em .4em .2em .3em;
   font-style: normal;
@@ -76,4 +79,31 @@ kbd.light,
   color: #323232;
   text-shadow: 0 0 2px #ffffff;
   box-shadow: inset 0 0 1px #ffffff, inset 0 0 0.4em #c8c8c8, 0 0.1em 0 #828282, 0 0.11em 0 rgba(0, 0, 0, 0.4), 0 0.1em 0.11em rgba(0, 0, 0, 0.9);
+}
+kbd.so,
+.so-keys kbd,
+.key.so,
+.so-keys .key {
+  display: inline;
+  display: inline-block;
+  white-space: nowrap;
+  min-width: 1em;
+  padding: .3em .4em .2em .3em;
+  font-style: normal;
+  font-family: "Lucida Grande", Lucida, Arial, sans-serif;
+  text-align: center;
+  text-decoration: none;
+  border-radius: .3em;
+  border: none;
+  margin: 0 .1em;
+  padding: .1em .6em;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 11px;
+  line-height: 1.4;
+  color: #242729;
+  text-shadow: 0 1px 0 #FFF;
+  background-color: #e1e3e5;
+  border: 1px solid #adb3b9;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(12, 13, 14, 0.2), 0 0 0 2px #FFF inset;
 }
