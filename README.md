@@ -4,6 +4,11 @@
 
 A simple stylesheet to render beautiful keyboard-styled elements.
 
+## Demo
+
+https://gerhobbelt.github.io/keyscss/demo.html
+
+
 ## Usage
 
 Download the stylesheet and include it via
